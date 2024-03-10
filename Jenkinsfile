@@ -1,10 +1,16 @@
 pipeline {
-    agent any
+    agent {
+        docker {
+            image 'ubuntu'
+            label 'ubuntu'
+            args  '-v /tmp:/tmp'
+        }
+    }
 
     stages {
         stage('Hello') {
             steps {
-                sh 'cat README.md'
+                sh 'cat /etc/os-release'
             }
         }
     }

@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Hello') {
             steps {
-                cat README.md
+                ls
             }
         }
     }

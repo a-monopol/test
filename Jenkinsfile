@@ -2,8 +2,6 @@ pipeline {
     agent {
         docker {
             image 'ubuntu'
-            label 'ubuntu'
-            args  '-v /tmp:/tmp'
         }
     }
 
